@@ -1,0 +1,19 @@
+---
+plugin:
+  plugin: systemconfig
+  package: accounts
+  copyright:
+    - {year: 2010, name: Cloudred, contact: http://cloudred.com}
+  description: Overrides system values with account values
+  version: 0.1
+  requirements:
+    liberty: {min: 2.1.5}
+    acounts: {min: 0.0.0}
+  type: account_systemconfig    # the service guid
+  base_class: LibertyBase
+  base_package: liberty
+  content_types: [bitaccount]
+  settings:
+    systemoverrides:
+      site_logo: {label: Site Logo, note: Replace the site logo with the account logo, type: boolean, default: y}
+      site_title: {label: Site Title, note: Replace the site title with the account title, type: boolean, default: y}
