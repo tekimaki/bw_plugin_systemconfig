@@ -34,7 +34,7 @@ if( $gBitSystem->isPackageActive( 'accounts' ) && $gBitUser->hasPermission( 'p_a
 	}
 
 	if( !empty( $gAccount ) ){
-		$gBitSysmtem->mConfig['site_title'] = $gAccount->getTitle();
+		$gBitSystem->setConfig( 'site_title',$gAccount->getTitle() );
 	}
 /* =-=- CUSTOM END: setup_plugin -=-= */
 }
