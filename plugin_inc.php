@@ -33,7 +33,7 @@ if( $gBitSystem->isPackageActive( 'accounts' ) && $gBitUser->hasPermission( 'p_a
 		require_once( CONFIG_PKG_PATH.'accounts/plugins/dns/plugin_inc.php' );
 	}
 
-	if( !empty( $gAccount ) ){
+	if( !empty( $gAccount ) && $gAccount->isValid() ){
 		$gBitSystem->setConfig( 'site_title',$gAccount->getTitle() );
 	}
 /* =-=- CUSTOM END: setup_plugin -=-= */
